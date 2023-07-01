@@ -61,6 +61,8 @@ Route::post('files/delete', [FileManagerController::class, 'destroy'])->name('fi
 
 Route::get('download_file_object/{id}', [FileManagerController::class, 'downloadObject']);
 Route::get('show-media-file/{id}', [FileManagerController::class, 'showMediaFile']);
+Route::get('file/upload', [FileManagerController::class, 'uploadPage'])->name('file.upload.index');
+Route::post('file/upload', [FileManagerController::class, 'upload'])->name('file.upload.store');
 
 // File::put();
 

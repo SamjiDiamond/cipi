@@ -178,8 +178,13 @@
                             points="460.487,355.59 460.487,387.927 419.44,387.927 419.44,431.108 402.496,431.108 
 	402.496,312.42 419.44,312.42 419.44,355.59 " />
                     </svg>
+
                     {{-- <input type="button" value="+ new folder" id="new-folder"> --}}
-                    <input type="file" name="upload">
+                    <form action="{{route('file.upload.index')}}" style="display: inline-block;" method="get">
+                        <input type="hidden" name="path" value="{{$path}}">
+                        <input type="submit" value="upload" class="btn btn-link text-dark">
+                    </form>
+                   
                 </div>
 
                 <table class="table table-hover table-border table-condensed">
